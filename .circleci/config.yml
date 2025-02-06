@@ -19,9 +19,9 @@ jobs:
 
       - run:
           name:
-          command: | 
+          command: |
             docker run -d ---name DaApp --rm -p 8000:8000node-js-1
 
 
-            
+
 
