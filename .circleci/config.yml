@@ -21,6 +21,12 @@ jobs:
             docker run -d -p 8080:8080 --name LEZGO laeim/commetuveux:latest
             sleep 15
             curl http://localhost:8080
+
+      - run:
+          name: "Push DockerHub"
+          command: |
+            echo "$DOCKER_MDP" | docker login -u annoncebarre@gmail.com --password-stdin
+            docker push laeim/commetuveux:latest
       
 
 workflows:
