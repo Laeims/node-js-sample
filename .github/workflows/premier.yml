@@ -15,11 +15,7 @@ jobs:
 workflows:
   build-and-publish-docker-image:
     jobs:
-       - docker/publish:
-          docker-password: DOCKER_MDP
-          docker-username: DOCKER_USER
-          image: laeim/commetuveux
-          tag: tagpersooklm
+       - build
 
 
 
