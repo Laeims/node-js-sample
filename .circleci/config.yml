@@ -18,8 +18,8 @@ jobs:
       - run:
           name: "Test curl"
           command: |
-          docker run -d -p 8080:8080 --name LEZGO laeim/commetuveux:latest
-          curl http://localhost:8080
+            docker run -d -p 8080:8080 --name LEZGO laeim/commetuveux:latest
+            curl http://localhost:8080
       
 
 workflows:
