@@ -34,12 +34,10 @@ orbs:
   docker: circleci/docker@2.8.2
 
 workflows:
-  version: 2
   build-and-publish-docker-image:
     jobs:
        - docker/publish:
           docker-password: DOCKER_MDP
           docker-username: annoncebarre@gmail.com
           image: laeim/commetuveux:latest
-
 
