@@ -6,16 +6,22 @@ version: 2.1
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   build:
-    working_directory: ~/app
     machine:
       - image: node:18-alpine
 
     steps:
       - checkout
-      - setup_remote_docker:
-          docker_layer_caching: true
       - run:
           name: "Build image"
           command: |
             docker build -t node-js-1 .
+
+
+      - run:
+          name:
+          command: | 
+            docker run -d ---name DaApp --rm -p 8000:8000node-js-1
+
+
+            
 
