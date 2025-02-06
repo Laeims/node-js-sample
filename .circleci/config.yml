@@ -42,6 +42,5 @@ workflows:
             docker-password: $DOCKER_MDP
             docker-username: annoncebarre@gmail.com
             image: laeim/commetuveux:latest
-            name: ORBZZ
 
 
