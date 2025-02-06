@@ -15,6 +15,11 @@ jobs:
           name: "Build_image"
           command: docker build -t laeim/commetuveux:latest .
 
+      - run:
+          name: "Test curl"
+          command: docker run -d -p 8080:8080 --name LEZGO
+      
+
 workflows:
   version: 2
   build:
