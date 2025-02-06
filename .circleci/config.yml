@@ -38,7 +38,7 @@ workflows:
   build-and-publish-docker-image:
     jobs:
        - docker/publish:
-          docker-password: $DOCKER_MDP
+          docker-password: DOCKER_MDP
           docker-username: annoncebarre@gmail.com
           image: laeim/commetuveux:latest
 
