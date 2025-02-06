@@ -6,7 +6,7 @@ version: 2.1
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   build:
-    working_directory: ~
+    working_directory: ~/app
     docker:
       - image: node:18-alpine
 
@@ -16,6 +16,7 @@ jobs:
           docker_layer_caching: true
       - run:
           name: "Build image"
-          command: docker build -t node-app-1 .
+          command:|
+            docker build -t $DOCKER_IMAGE:latest .
 
 
