@@ -5,7 +5,7 @@ version: 2.1
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
-  build1:
+  build:
     machine:
       - image: node:18-alpine
 
@@ -17,8 +17,8 @@ jobs:
 
 workflows:
   version: 2
-  build1:
+  build:
     jobs:
-      - build1
+      - build
 
 
