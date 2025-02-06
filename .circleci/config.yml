@@ -16,7 +16,5 @@ jobs:
           docker_layer_caching: true
       - run:
           name: "Build image"
-          command:|
+          command: |
             docker build -t $DOCKER_IMAGE:latest .
-
-
