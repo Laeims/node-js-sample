@@ -38,6 +38,6 @@ workflows:
     jobs:
        - docker/publish:
           docker-password: DOCKER_MDP
-          docker-username: annoncebarre@gmail.com
+          docker-username: DOCKER_USER
           image: laeim/commetuveux:latest
 
