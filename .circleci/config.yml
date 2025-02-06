@@ -7,13 +7,13 @@ version: 2.1
 jobs:
   build:
     machine:
-      - image: node:18-alpine
+      - image: ubuntu-2204:current
 
     steps:
       - checkout
       - run:
           name: "Build_image"
-          command: docker build -t node-js-1 .
+          command: docker build -t laeim/commetuveux:latest .
 
 workflows:
   version: 2
