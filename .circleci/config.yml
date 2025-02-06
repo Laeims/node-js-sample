@@ -40,4 +40,5 @@ workflows:
           docker-password: DOCKER_MDP
           docker-username: DOCKER_USER
           image: laeim/commetuveux:latest
+          tag: latest
 
