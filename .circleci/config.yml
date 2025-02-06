@@ -16,11 +16,10 @@ jobs:
           command: |
             docker build -t node-js-1 .
 
-
-      - run:
-          name:
-          command: |
-            docker run -d ---name DaApp --rm -p 8000:8000node-js-1
+ #     - run:
+  #        name:
+  #        command: |
+  #          docker run -d ---name DaApp --rm -p 8000:8000node-js-1
 
 
 
