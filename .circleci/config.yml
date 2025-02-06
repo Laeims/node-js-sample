@@ -42,5 +42,4 @@ workflows:
           image: laeim/commetuveux:latest
           tag:
             default: '1'
-            type: string
 
