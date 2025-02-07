@@ -34,11 +34,6 @@ jobs:
       id-token: write
 
     steps:
-      - name: Log in DockerHUb
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCK_USER }}
-          password: ${{ secrets.DOCK_TOKEN }}
 
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -65,9 +60,8 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: docker/login-action@343f7c4344506bcbf9b4de18042ae17996df046d # v3.0.0
         with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: ${{ secrets.DOCK_USER }}
+          password: ${{ secrets.DOCK_TOKEN }}
 
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
