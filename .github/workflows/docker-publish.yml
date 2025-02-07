@@ -50,7 +50,6 @@ jobs:
           context: .
           push: true
           tags: laeims/commetuveux:TP2
-          labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
