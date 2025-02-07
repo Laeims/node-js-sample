@@ -2,7 +2,6 @@ name: Docker
 
 # This workflow uses actions that are not certified by GitHub.
 # documentation.
-
 on:
   push:
     branches: "master"
