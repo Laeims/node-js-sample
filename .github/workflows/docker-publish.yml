@@ -35,6 +35,4 @@ jobs:
           context: .
           push: true
           tags: laeims/commetuveux:TP2
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
 
